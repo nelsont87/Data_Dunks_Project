@@ -1,0 +1,138 @@
+<!-- Main Setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DataDunks</title>
+
+	<!-- Importing Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- Importing all Javascript sources -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<!-- Importing link to style.css file -->
+	<link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<!-- The Body Begins Here -->
+<body>
+
+<!-- Start Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="../static/img/ddlogo.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="pvp.html">Player vs Player</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="tvt.html">Team vs Team</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="stats.html">Database</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About Us</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navigation Bar -->
+
+<!-- Start About Section 1-->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4">About Us</h1>
+	</div>
+	<hr>
+	<div class="col-12">
+		<h2>Overview</h2>
+		<p class="lead">Settle the long-standing social arguments between which basketball legends are “superior” to other players. As fans of the sport, we use ETL techniques to gather historical statistics on individual basketball players and store them into a database. Using statistical algorithms, we combine the data in a web server to “clash” player versus player. We will also attempt to create a “team versus team” mode where users can input names of various basketball players into two separate teams. An algorithm will be placed to determine which fantasy team is more likely to win.</p>
+
+		<hr>
+
+		<h2>Project Description</h2>
+		<p class="lead">Based on historical quantitative data, which player and which team can truly boast the title of “the best of the best”? User’s will be able to input players and input teams using players of their choice to see how each player or team stacks up to the NBA’s top performers. Franchise leaders and managers can also use this website to analyze the best team configurations that the current NBA can create. On top of discovering the value of a player, users will also have the option of discovering the worst, most devalued player in the league. Following this mindset, Franchise leaders and managers will also be able to find the least valuable, or least contributing player to source which players do not deserve a spot on their team. </p>
+
+		<hr>
+
+		<h2>How Does the Simulation Work?</h2>
+		<p class="lead">For our stats, we will have collected each player’s career stats that were recorded. From there we will compare each of the season stats that each player has to determine their best season. We will do that using a sum off all of their stats and choosing the highest total sum. From there we will rely heavily on the PER(player efficiency rating) to compare who the better player is, we are using this stat as it is the widely accepted aggregate statistic that was recorded since 1973. PER is more weighted to offensive ability and rewards higher minute players but still does take into account defensive stats and weights. We will also be using the 3 point and 2 point shot categories to determine how the player will win.</p>
+		<p class="lead">For team vs team we will use the same stats and side by side comparison of the different positions on a team. We will however specify the center position on each team to only be players that play center. We will also display their stats and highlight the ones that are higher.</p>
+
+		<hr>
+
+		<h2>Research Questions</h2>
+		<p class="lead">1) Based on historical data between 1988 and 2019, which fantasy team is truly the “best”?</p>
+		<p class="lead">2) Who is the greatest player of all time between 1988 and 2019?</p>
+		<p class="lead">3) Which player is superior in a player vs. player match up based on best season overall stats?
+		</p>
+		<p class="lead">4) How does a player compare to the “greatest of all time”?</p>
+
+		<hr>
+
+		<h2>Our Initial Vision</h2>
+		<p class="lead">We envision the project to incorporate five webpages: Home Page, Player vs. Player, Team vs. Team, Statistics and Data Sets, and About Page.</p>
+
+		<h4>Home Page</h4>
+		<p class="lead">There will be a Navigation Bar at the top of the page with the main website’s logo on the far left. This logo will also be used as a “home button” that will bring the user back to the starter page. To grab the user’s attention, the Home Page will be designed using images of basketball players “in the heat of a game” to create an aesthetically pleasing context of excitement. Further aspirations for the Home Page will also use a scraping function to scrape NBA twitter or NBA news and display it on the bottom of this page. We have not decided on whether we want to use a dropdown menu or provide links to the other pages.</p>
+
+		<h4>Player vs Player</h4>
+		<p class="lead">This page will have two search bars where users will be able to input the names of basketball players and watch them “battle” (through the use of a quick animation). The function will pull the best season stats of each player, and the algorithm will be placed to calculate which player has a better overall score. After the user clicks the initial “battle” button, an animation will occur and the winner will appear on the page with a “win” animation underneath his picture. Below is a small visual of this webpage.</p>
+
+		<p class="lead">______________ vs. _______________ [BATTLE!]</p>
+
+		<p class="lead">Below the “battle” animation, both players stats will appear for the User’s convenience to review. If time permits, we would also like to add in a linear regression chart that shows the overall stats of both players in a year [independent] and overall stats [dependent] format.</p>
+
+		<h4>Team vs Team</h4>
+		<p class="lead">Users will be able to input the names of ten players and divide those players into two separate teams. Although the User may use any player since 1988, Users may only use a player once for each team. A generic animation will occur using players from both teams. The animation will end with the team with a higher overall statistics similar to the algorithm used in Player vs Player. Below is a small visual of this webpage.</p>
+
+		<p class="lead">PG_______________  vs  PG _______________</p>
+		<p class="lead">SG_______________  vs  SG_______________</p>
+		<p class="lead">SF_______________   vs  SF_______________</p>
+		<p class="lead">PF_______________   vs  PF_______________</p>
+		<p class="lead">C________________   vs  C________________</p>
+		<p class="lead"> [BATTLE!]</p>
+
+		<h4>Statistics</h4>
+		<p class="lead">We will use the datasets we pulled from the ETL project (or a new ETL process) and stored in an SQLite database. This page will have a single search bar where Users will be able to input a player’s name and click on a [search] button that will generate the players best seasons stats and also display a linear regression chart on 1) the players overall stats since 1988, and 2) the players efficiency rating (PER) compared to the entire NBA’s PER average.</p>
+
+		<h4>About Page</h4>
+		<p class="lead">This web page is a general “about” page that explains the purpose of the project, our main motivations, and summarize our methods that resulted in the website. We will most likely use information written on this proposal sheet.</p>
+
+		<hr>
+
+		<h2>References</h2>
+		<p class="lead">Our data is derived from the below sources:</p>
+
+		<p class="lead">https://www.basketball-reference.com/</p>
+		<p class="lead">https://www.nba.com/</p>
+
+		<hr>
+
+	</div>
+</div>
+</div>
+<!-- End About Section 1-->
+
+</body>
+</html>

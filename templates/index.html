@@ -1,0 +1,249 @@
+<!-- Main Setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DataDunks</title>
+
+	<!-- Importing Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- Importing all Javascript sources -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<!-- Importing link to style.css file -->
+	<link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<!-- The Body Begins Here -->
+<body>
+
+<!-- Start Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="../static/img/ddlogo.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="pvp.html">Player vs Player</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="tvt.html">Team vs Team</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="stats.html">Database</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About Us</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navigation Bar -->
+
+<!-- Start Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+	<li data-target="#slides" data-slide-to="0" class="active"></li>
+	<li data-target="#slides" data-slide-to="1"></li>
+	<li data-target="#slides" data-slide-to="2"></li>
+</ul>
+<div class="carousel-inner">
+	<div class="carousel-item active">
+		<img src="../static/img/background2.png">
+		<div class="carousel-caption">
+			<h1 class="display-2">Who is the King of the Court?</h1>
+			<h3>Find out here!</h3>
+			<button type="button" class="btn btn-outline-light btn-lg">Player vs Player</button>
+			<button type="button" class="btn btn-primary btn-lg">Try me!</button>
+		</div>
+	</div>
+	<div class="carousel-item">
+		<img src="../static/img/background1.jpg">
+		<div class="carousel-caption">
+			<h1 class="display-2">Legends vs Legends? Why Not!</h1>
+			<h3>Create a team here!</h3>
+			<button type="button" class="btn btn-outline-light btn-lg">Team vs Team</button>
+			<button type="button" class="btn btn-primary btn-lg">Try me!</button>
+		</div>
+	</div>
+	<div class="carousel-item">
+		<img src="../static/img/background3.png">
+		<div class="carousel-caption">
+			<h1 class="display-2">Curious about Data?</h1>
+			<h3>Check out our Database!</h3>
+			<button type="button" class="btn btn-outline-light btn-lg">View Stats</button>
+			<button type="button" class="btn btn-primary btn-lg">Try me!</button>
+		</div>
+	</div>
+</div>
+</div>
+<!-- End Image Slider -->
+
+<!-- Start Jumbotron -->
+<div class="container-fluid">
+<div class="row jumbotron">
+	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+		<p class="lead">Simulate your favorite players into a fantasy battle. Find out who truly deserves the crown.</p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+		<a href="pvp.html"><button type="button" class="btn btn-outline-secondary btn-lg">TEST</button></a>
+	</div>
+</div>	
+</div>
+<!-- End Jumbotron -->
+<!-- Start Optional Section 1-->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4">Fantasy Teams</h1>
+	</div>
+	<hr>
+	<div class="col-12">
+		<p class="lead">Simulate a franchise manager, and place all your favorite legends into your own team.</p>
+	</div>
+</div>
+</div>
+<!-- End Optional Section 1-->
+
+<!-- Start Optional Section 2 -->
+<div class="container-fluid padding">
+<div class="row text-center padding">
+	<div class="col-xs-12 col-xm-6 col-md-4">
+		<i class="fas fa-basketball-ball"></i>
+		<h3>Historical Teams</h3>
+		<p>You can input names of players from a specific team, any season</p>
+	</div>
+	<div class="col-xs-12 col-xm-6 col-md-4">
+		<i class="fas fa-gamepad"></i>
+		<h3>Fantasy Teams</h3>
+		<p>Take any player from any season, and place them into your dream team</p>
+	</div>
+	<div class="col-xs-12 col-xm-6 col-md-4">
+		<i class="fas fa-chart-line"></i>
+		<h3>Current Teams</h3>
+		<p>Want to predict the outcome of an upcoming game? These simulations are based on historical performances!</p>
+	</div>
+</div>
+<hr class="my-4">
+</div>
+<!-- End Optional Section 2 -->
+
+<!-- Start Optional Section 3 -->
+<div class="container-fluid padding">
+<div class="row padding">
+	<div class="col-md-12 col-lg-6">
+		<h2>Statistics and Database</h2>
+		<p>Our innovative thinking stems from a UC Berkeley Project that we were forced to do against our will! Using methods in Python, Javascript, SQL, and HTML/CSS, we obtained information from various websites into a single database. View our data by clicking the button below!</p>
+		<br>
+		<a href="stats.html" class="btn btn-primary">Show me!</a>
+	</div>
+	<div class="col-lg-6">
+		<img src="../static/img/wallpaper.png" class="img-fluid">
+	</div>
+</div>
+</div>
+<!-- End Optional Section 3 -->
+
+
+<hr class="my-4">
+
+
+<!-- Start Optional Section 4 Meet the Team-->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4">Meet the Team</h1>
+	</div>
+	<hr>
+</div>
+</div>
+<!-- End Optional Seciton 4 Meet the Team-->
+
+<!-- Start Creating Cards for Section 4 -->
+<div class="container-fluid padding">
+<div class="row padding">
+	<div class="col-md-3">
+		<div class="card">
+			<img class="card-img-top" src="../static/img/gm.png">
+			<div class="card-body">
+				<h4 class="card-title">Gian Millare</h4>
+				<p class="card-text">Data Scientist & Website Designer</p>
+				<a href="https://github.com/gianmillare" class="btn btn-outline-secondary">View Portfolio</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="card">
+			<img class="card-img-top" src="../static/img/oa.png">
+			<div class="card-body">
+				<h4 class="card-title">Omar Abi</h4>
+				<p class="card-text">Data Sourcer & Researcher</p>
+				<a href="https://github.com/omarabi88" class="btn btn-outline-secondary">View Portfolio</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="card">
+			<img class="card-img-top" src="../static/img/nt.png">
+			<div class="card-body">
+				<h4 class="card-title">Nelson Tsai</h4>
+				<p class="card-text">Lead Data Scientist & JS Specialist</p>
+				<a href="https://github.com/nelsont87" class="btn btn-outline-secondary">View Portfolio</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="card">
+			<img class="card-img-top" src="../static/img/eh.png">
+			<div class="card-body">
+				<h4 class="card-title">Eric Huey</h4>
+				<p class="card-text">Lead Data Analyst & Hypeman</p>
+				<a href="https://github.com/ehuey001" class="btn btn-outline-secondary">View Portfolio</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+<!-- End Creating Cards for Section 4 -->
+
+<!-- Start Overview of About Us Page -->
+<div class="container-fluid padding">
+<div class="row padding">
+	<div class="col-md-12 col-lg-6">
+		<h2>About Us</h2>
+		<p>We are students of UC Berkeley's Data Analytics Program. Want to know our motivation to create this project? Maybe you'd like to know the process and procedures. All can be found on our About Us Page. Click on the link below!</p>
+		<br>
+		<a href="about.html" class="btn btn-primary">Let's Go!</a>
+	</div>
+	<div class="col-lg-6">
+		<img src="../static/img/ucb.jpg" class="img-fluid">
+	</div>
+</div>
+</div>
+<!-- End Overview of About Us Page -->
+
+
+
+</body>
+</html>

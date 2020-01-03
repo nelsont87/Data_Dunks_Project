@@ -1,0 +1,214 @@
+<!-- Main Setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DataDunks</title>
+
+	<!-- Importing Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- Importing all Javascript sources -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+
+	<!-- Importing link to style.css file -->
+	<link href="../static/css/style3.css" rel="stylesheet">
+</head>
+
+<!-- The Body Begins Here -->
+<body>
+
+<!-- Start Navigation Bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="index.html"><img src="../static/img/ddlogo.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="pvp.html">Player vs Player</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="tvt.html">Team vs Team</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="stats.html">Database</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About Us</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navigation Bar -->
+
+<!-- Start of Header  -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1 class="display-4">Team vs. Team</h1>
+		<h4>Formulate your Dream Team!</h4>
+	</div>
+
+	<hr>
+<!-- End of Header -->
+
+<!-- Start Forms -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<div class="header">
+			<form id="form1" autocomplete="off" method="POST" action="/tvt.html">
+				<h2>Input Your Players</h2>
+				<div class="form-box">
+				<div class = "autocomplete" >
+					<input id = "tvt1" type="text" class="search-field player1" placeholder="POINT GUARD" name="player_one">
+				</div>
+				<div class = "autocomplete" >
+					<input id = "tvt2" type="text" class="search-field player2" placeholder="POINT GUARD" name="player_two">
+				</div>
+				<br>
+				<div class = "autocomplete" >
+					<input id = "tvt3" type="text" class="search-field player3" placeholder="SHOOTING GUARD" name="player_three">
+				</div>
+				<div class = "autocomplete" >
+					<input id = "tvt4" type="text" class="search-field player4" placeholder="SHOOTING GUARD" name="player_four">
+				</div>
+				<br>
+				<div class = "autocomplete" >
+					<input id = "tvt5" type="text" class="search-field player5" placeholder="SHOOTING FORWARD" name="player_five">
+				</div>
+				<div class = "autocomplete" >
+					<input id = "tvt6" type="text" class="search-field player6" placeholder="SHOOTING FORWARD" name="player_six">
+				</div>
+				<br>
+				<div class = "autocomplete" >
+					<input id = "tvt7" type="text" class="search-field player7" placeholder="POWER FORWARD" name="player_seven">
+				</div>
+				<div class = "autocomplete" >
+					<input id = "tvt8" type="text" class="search-field player8" placeholder="POWER FORWARD" name="player_eight">
+				</div>
+				<br>
+				<div class = "autocomplete" >
+					<input id = "tvt9" type="text" class="search-field player9" placeholder="CENTER" name="player_nine">
+				</div>
+				<div class = "autocomplete" >
+					<input id = "tvt10" type="text" class="search-field player10" placeholder="CENTER" name="player_ten">
+				</div>
+				<br>
+
+				<button form="form1" class="search-btn" type="submit" onsubmit="buildPlot()">Versus</button>
+				
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- End Forms -->
+
+<!-- Start Animation Container -->
+<div class="container" style= "height: 450px">
+		<div class="row">
+			<div class="col-md-12">
+					<hr>
+				<img class="gif" id="threePoint" src="/static/gif/midorama-shot.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 70%; height: 200px; width: 300px; margin:0; padding: 0;"/>
+				<img class="gif" id="inair" src="/static/gif/ballflightline.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 50%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="hoop" src="/static/gif/going_through_hoop.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 20%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="launch" src="/static/gif/kagami_launch.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 70%; height: 200px; width: 300px; margin:0; padding: 0;"/>
+				<img class="gif" id="air" src="/static/gif/kagami_air.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 50%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="dunk" src="/static/gif/meteor_jam.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 20%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="fThreePoint" src="/static/gif/fliped_midorima_shot.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 5%; height: 200px; width: 300px; margin:0; padding: 0;"/>
+				<img class="gif" id="fInair" src="/static/gif/flipped_inflight.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 35%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="fHoop" src="/static/gif/flipped_through_hoop.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 60%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="fLaunch" src="/static/gif/flip_kagami_launch.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 5%; height: 200px; width: 300px; margin:0; padding: 0;"/>
+				<img class="gif" id="fAir" src="/static/gif/flip_kagami_air.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 35%; height: 200px; width: 300px; margin:0; padding:0;">
+				<img class="gif" id="fDunk" src="/static/gif/flipped_meteor_jam.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 60%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="winnerL" src="/static/gif/winner.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 20%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="loserR" src="/static/gif/lose.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 60%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="loserL" src="/static/gif/lose.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 20%; height: 200px; width: 300px; margin:0; padding:0;"/>
+				<img class="gif" id="winnerR" src="/static/gif/winner.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 60%; height: 200px; width: 300px; margin:0; padding:0;"/>
+
+				<img id="court" src="/static/gif/basketball-court-png-hd-basketball-court-background-related-keywords-suggestions-2085.png" style = "position: absolute; left: 8%; height: 350px; width: 650px; z-index: -1; margin:0; padding:0;">
+				
+			</div>
+			<button id="tvtWatch" >Watch Again</button>
+		</div>
+
+</div>
+<!-- End Animation Container -->
+
+<!-- Start Stats Container -->
+
+<div class="container-fluid">
+	<div class="row force-to-bottom">
+		<div  class="col-md-12">
+			<h3>Player Stats</h3>
+			<hr>
+			<table class="table table-striped" >
+				<thead>
+					<tr><th>Player</th><th>BPM</th><th>2P</th><th>3P</th><th>eFG%</th><th>PER</th></tr>
+				</thead>
+				<tbody id="statstvt"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- End Stats Containers -->
+
+<!-- Start Box PlusMinus Bar Chart -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+	<div class="col-12">
+		<h1>Box PlusMinus</h1>
+		<hr>
+		<div id="tvt_chart"></div>
+	</div>
+</div>
+</div>
+<!-- End Box PlusMinus Bar Chart -->
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/app1.js') }}"></script>
+<script src = "/static/js/animationtvt.js"></script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
