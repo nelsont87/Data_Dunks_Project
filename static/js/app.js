@@ -17,10 +17,13 @@ d3.json(`/pvpstats`).then(function(data) {
 		// console.log(value['info']['BPM']);
 	});
 	var traceA = {
-		x: names,
-		y: bpm,
-		type: 'bar'
-	};
+        x: names,
+        y: bpm,
+        type: 'bar',
+        marker:{
+            color: ['rgba(255,0,0,0.8)','rgba(0,0,255,0.8)']
+        }
+    };
 	// var traceB = {
 	// 	x: ["Player"],
 	// 	y: bpm[1],
@@ -224,7 +227,7 @@ function autocomplete(inp, arr) {
    'Lisa Leslie','Dikembe Mutombo','Jo Jo White','Yao Ming','Cumberland Posey','Sheryl Swoopes','Zelmo Beaty',"Shaquille O'Neal",
    'Allen Iverson','Tracy McGrady','Nikos Galis','George McGinnis','Ray Allen','Maurice Cheeks','Grant Hill','Jason Kidd',
    'Steve Nash','Katie Smith','Tina Thompson','Ora Mae Washington','Dino Rađa','Charlie Scott','Carl Braun','Chuck Cooper',
-   'Vlade Divac','Bobby Jones','Sidney Moncrief','Jack Sikma','Teresa Weatherspoon','Paul Westphal'];
+   'Vlade Divac','Bobby Jones','Sidney Moncrief','Jack Sikma','Teresa Weatherspoon','Paul Westphal','Dirk Nowitzki','Russell Westbrook', 'Kevin Garnett', 'Tim Duncan', 'Kobe Bryant'];
 
 
 

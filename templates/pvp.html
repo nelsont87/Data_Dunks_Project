@@ -1,76 +1,64 @@
-<!-- Main Setup -->
+<!-- Set Up -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
 	<title>DataDunks</title>
 
-	<!-- Importing Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Importing Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+	<!-- Importing the other links -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	<!-- Importing all Javascript sources -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<!-- Importing the link to CSS File -->
+	<link href="../static/css/style2.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
-
-	<!-- Importing link to style.css file -->
-	<link href="../static/css/style2.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 
 
-</head>
+  </head>
 
 <!-- The Body Begins Here -->
 <body>
 
-<!-- Start Navigation Bar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-<div class="container-fluid">
-	<a class="navbar-brand" href="index.html"><img src="../static/img/ddlogo.png"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarResponsive">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pvp.html">Player vs Player</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="tvt.html">Team vs Team</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="stats.html">Database</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="about.html">About Us</a>
-			</li>
-		</ul>
-	</div>
-</div>
+<!-- Create the Nav Bar -->
+<nav>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+		<i class="fas fa-bars"></i>
+	</label>
+	
+	<label class="logo">DataDunks</label>
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a class="active" href="pvp.html">Player vs. Player</a></li>
+		<li><a class="active" href="tvt.html">Team vs. Team</a></li>
+		<li><a class="active" href="stats.html">Database</a></li>
+		<li><a class="active" href="about.html">About Us</a></li>
+	</ul>
 </nav>
-<!-- End Navigation Bar -->
+
+<hr>
 
 <!-- Start of Header  -->
-<div class="container-fluid padding">
-<div class="row welcome text-center">
-	<div class="col-12">
-		<h1 class="display-4">Player vs. Player</h1>
-		<h4>Choose two players and see who comes out on top!</h4>
+<!-- Create JumboTron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+			<h1>Player vs. Player</h1>
+		</div>
 	</div>
+</div>
 
-	<hr>
 <!-- End of Header -->
 
 <!-- Start Forms -->
@@ -95,11 +83,13 @@
 </div>
 </div>
 
+<hr style="border: 1px solid #F8F8FF;" />
+
 <!-- End Forms -->
 
 
 <!-- Start Animation Container -->
-<div class="container" style= "height: 450px">
+<div class="container" style= "width: 50%; height: 450px; left:50%;">
 		<div class="row">
 			<div class="col-md-12">
 					<hr>
@@ -121,7 +111,7 @@
 				<img class="gif" id="winnerR" src="/static/gif/winner.gif" style = "visibility: hidden; position: absolute; top: 0%; left: 60%; height: 200px; width: 300px; margin:0; padding:0;"/>
 
 
-				<img id="court" src="/static/gif/basketball-court-png-hd-basketball-court-background-related-keywords-suggestions-2085.png" style = "position: absolute; left: 8%; height: 350px; width: 650px; z-index: -1; margin:0; padding:0;">
+				<img id="court" src="/static/gif/basketball-court-png-hd-basketball-court-background-related-keywords-suggestions-2085.png" style = "opacity: 0; position: absolute; left: 8%; height: 350px; width: 650px; z-index: -1; margin:0; padding:0;">
 				
 			</div>
 			<button id="pvpWatch" >Watch Again</button>
@@ -132,11 +122,17 @@
 
 
 <!-- Start Stats Containers -->
+
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+			<h1>Player Stats</h1>
+		</div>
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="row force-to-bottom">
 	<div  class="col-md-12">
-		<h3>Player Stats</h3>
-		<hr>
 		<table class="table table-striped" >
 			<thead>
 				<tr><th>Player</th><th>BPM</th><th>2P</th><th>3P</th><th>eFG%</th><th>PER</th></tr>
@@ -149,11 +145,16 @@
 <!-- End Stats Containers -->
 
 <!-- Start Box PlusMinus Bar Chart -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+			<h1>Box Plus Minus</h1>
+		</div>
+	</div>
+</div>
 <div class="container-fluid padding">
 <div class="row welcome text-center">
 	<div class="col-12">
-		<h1>Box PlusMinus</h1>
-		<hr>
 		<div id="pvp_chart"></div>
 	</div>
 </div>

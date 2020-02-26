@@ -63,6 +63,9 @@ def info():
         player_list.append({'name' :player, 'info': careerbest_index.loc[player, ["BPM", "2P", "3P", "eFG%", "PER"]].to_dict()})
         # print(player_list[0])
         # print(type(player_list[0]))
+
+    session.pop("player_one", None)
+    session.pop("player_two", None)
     return jsonify(player_list)
 
 
@@ -108,6 +111,17 @@ def team():
     for player in tvtlist:
         team_list.append({'name' :player, 'info': careerbest_index.loc[player, ["BPM", "2P", "3P", "eFG%", "PER"]].to_dict()})
 
+
+    session.pop("player_one", None)
+    session.pop("player_two", None)
+    session.pop("player_three", None)
+    session.pop("player_four", None)
+    session.pop("player_five", None)
+    session.pop("player_six", None)
+    session.pop("player_seven", None)
+    session.pop("player_eight", None)
+    session.pop("player_nine", None)
+    session.pop("player_ten", None)
     return jsonify(team_list)
 
 @app.route("/about.html")
@@ -132,6 +146,8 @@ def statsplayer():
     player = career.loc[career["Player"] == player, ["Player", "Season", "BPM", "2P", "3P", "eFG%", "PER"]].to_dict('records')
         # print(player_list[0])
         # print(type(player_list[0]))
+
+    session.pop("player", None)
     return jsonify(player)
 
 

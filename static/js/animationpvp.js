@@ -25,11 +25,11 @@ function animation() {
   if (bpm[0] > bpm[1]){
     if((data[0]["info"]["3P"])*3>(data[0]["info"]["2P"])*2){
       var timeLine = gsap.timeline();
-      timeLine.to("#fThreePoint", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.1, x: 100})
+      timeLine.to("#fThreePoint", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.1, x: 25})
         .to("#fThreePoint", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#fInair", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: 100})
+        .to("#fInair", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: 25})
         .to("#fInair", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#fHoop", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: 100})
+        .to("#fHoop", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: 25})
         .to("#fHoop", {autoAlpha:0, visbility: "hidden", position: "absolute"})
         .to("#winnerL", {autoAlpha:1, visibility: "visible", position: "static", x: 0})
         .to("#loserR", {autoAlpha:1, visibility: "visible", position: "static", duration: 5, x: 0})
@@ -37,11 +37,11 @@ function animation() {
         .to("#loserR", {autoAlpha:0, visibility: "hidden", position: "static", x: 0});
     } else {
       var timeLine = gsap.timeline();
-      timeLine.to("#fLaunch", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.8, x: 100})
+      timeLine.to("#fLaunch", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.8, x: 25})
         .to("#fLaunch", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#fAir", {autoAlpha:1, visibility: "visible" , position: "static", duration: 1.8, x: 100})
+        .to("#fAir", {autoAlpha:1, visibility: "visible" , position: "static", duration: 1.8, x: 25})
         .to("#fAir", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#fDunk", {autoAlpha:1, visibility: "visible", position: "static", duration: 3.8, x: 100})
+        .to("#fDunk", {autoAlpha:1, visibility: "visible", position: "static", duration: 3.8, x: 25})
         .to("#fDunk", {autoAlpha:0, visbility: "hidden", position: "absolute"})
         .to("#winnerL", {autoAlpha:1, visibility: "visible", position: "static", x: 0})
         .to("#loserR", {autoAlpha:1, visibility: "visible", position: "static", duration: 5, x: 0})
@@ -51,11 +51,11 @@ function animation() {
   } else {
     if ((data[1]["info"]["3P"])*3>(data[1]["info"]["2P"])*2){
       var timeLine = gsap.timeline();
-      timeLine.to("#threePoint", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.1, x: -100})
+      timeLine.to("#threePoint", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.1, x: -25})
         .to("#threePoint", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#inair", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: -100})
+        .to("#inair", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: -25})
         .to("#inair", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-        .to("#hoop", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: -100})
+        .to("#hoop", {autoAlpha:1, visibility: "visible", position: "static", duration: 0.8, x: -25})
         .to("#hoop", {autoAlpha:0, visbility: "hidden", position: "absolute"})
         .to("#winnerR", {autoAlpha:1, visibility: "visible", position: "static", x: 0})
         .to("#loserL", {autoAlpha:1, visibility: "visible", position: "static", duration: 5, x: 0})
@@ -63,11 +63,11 @@ function animation() {
         .to("#loserL", {autoAlpha:0, visibility: "hidden", position: "static", x: 0});
       } else {
         var timeLine = gsap.timeline();
-        timeLine.to("#launch", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.8, x: -100})
+        timeLine.to("#launch", {autoAlpha:1, visibility: "visible", position: "static", duration: 2.8, x: -25})
           .to("#launch", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-          .to("#air", {autoAlpha:1, visibility: "visible", position: "static", duration: 1.8, x: -100})
+          .to("#air", {autoAlpha:1, visibility: "visible", position: "static", duration: 1.8, x: -25})
           .to("#air", {autoAlpha:0, visbility: "hidden", position: "absolute"})
-          .to("#dunk", {autoAlpha:1, visibility: "visible", position: "static", duration: 3.8, x: -100})
+          .to("#dunk", {autoAlpha:1, visibility: "visible", position: "static", duration: 3.8, x: -25})
           .to("#dunk", {autoAlpha:0, visbility: "hidden", position: "absolute"})
           .to("#winnerR", {autoAlpha:1, visibility: "visible", position: "static", x: 0})
           .to("#loserL", {autoAlpha:1, visibility: "visible", position: "static", duration: 5, x: 0})

@@ -1,42 +1,164 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: "Poppins" sans-serif;
-  color: white;
+/* From main css file */
+/* Set Up */
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
+/* End Set Up */
 
-body {
-  background-color: Black;
-  height: 100%;
+/* Body Alterations */
+body{
+  font-family: "Georgia";
+  background-color: #000000;
+  color: #F8F8FF;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/versus.jpg);
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
-
-.navbar {
-  padding: .1rem;
+.container-fluid{
+  padding: .05% 10%;
 }
 
-.navbar-nav li {
-  padding-right: 1.7rem;
+.jumbotron{
+  background-color: #6495ED;
+  text-align: center;
+  padding: 1%;
 }
 
-.nav-link {
-  font-size: 1.3rem !important;
+p.one {
+  border-style: solid;
+  border-color: white;
+  padding: 1% 1%;
 }
 
+h1.display-4{
+  border-style: solid;
+  border-color: white;
+  padding: 1% 1%;
+}
+
+.btn-primary{
+  padding: 1%;
+}
+/* End Body ALterations */
+
+/* Logo */
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 25px;
+  font-weight: bold;
+  /* border-style: solid;
+  border-color: white; */
+}
+/* End Logo */
+
+/* NavBar Alteration */
+nav{
+  background: #000000;
+  height: 80px;
+  width: 100%;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active, a:hover{
+  background: #6495ED;
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 952px){
+  label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+  nav ul li a{
+      font-size: 20px;
+  }
+  a:hover, a.active{
+      background: none;
+      color: #0082e6;
+  }
+  #check:checked ~ ul{
+      left: 0;
+  }
+}
+/* End NavBar Alterations */
+
+/* Carousel Alteration */
 .carousel-inner img {
   width: 100%;
   height: 100%;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-caption {
   position: absolute;
-  top: 50%;
+  top: 80%;
   transform: translateY(-20%);
 }
 
@@ -61,43 +183,9 @@ body {
   font-synthesis: 95%;
   padding: 8px 14px;
 }
+/* End Carousel Alterations */
 
-.display-4 {
-  font-size: 600%;
-}
-
-.btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #6648b1;
-}
-
-.btn-primary:hover {
-  background-color: #563d7c;
-  border: 1px solid #563d7c;
-}
-
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0;
-}
-
-.padding {
-  padding-bottom: 2rem;
-}
-
-.welcome {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-
-.welcome hr {
-  border-top: 2px solid #b4b4b4;
-  width: 95%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
-}
-
+/* Icon Alterations */
 .fa-basketball-ball{
   color: #FF8C00;
 }
@@ -114,12 +202,27 @@ body {
   font-size: 4rem;
   margin: 1rem;
 }
+/* End Icon Alterations */
 
-div.row.welcome.text-center {
-  color: OldLace;
-  text-shadow: 10px 10px 30px white;
-  font-family: Impact, Charcoal, sans-serif;
+/* Card Alterations */
+.card {
+  box-shadow: 0 4px 8px 0 Azure;
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  color: #000000;
 }
+
+.card-img-top{
+  padding: 2.5% 2.5%;
+}
+
+/* Miscellaneous Alterations */
+img.one{
+  border-style: solid;
+  border-color: white;
+  padding: 1% 1%;
+}
+/* End of copy from main css */
 
 .search-field {
   height: 50px;
@@ -138,49 +241,6 @@ div.row.welcome.text-center {
   border-radius: 25px;
 }
 
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-/*--- Fixed Background Image --*/
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0!important;
-}
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#fixed {
-  background-image: url('img/mac.png');
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  will-change: transform;
-}
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 1rem;
-}
-
 table th {
   color: white;
   border-left: 1px solid white;
@@ -196,10 +256,10 @@ table td {
 
 
 
-* { box-sizing: border-box; }
+/* * { box-sizing: border-box; }
 body {
   font: 16px Arial;
-}
+} */
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
